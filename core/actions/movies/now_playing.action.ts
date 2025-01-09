@@ -12,7 +12,7 @@ export const nowPlayingMovies = async () => {
 
         const movies = data.results.map(MovieMapper.fromTheMovieDbToMovie);
 
-        return [];
+        return movies;
     } catch (error) {
         console.log(error);
         throw error;
