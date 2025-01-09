@@ -4,8 +4,6 @@ import { nowPlayingMovies } from '@/core/actions/movies/now_playing.action'
 
 const RootLayout = () => {
 
-  nowPlayingMovies();
-
   return (
     <View>
       <Text>RootLayout</Text>
