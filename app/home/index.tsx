@@ -21,7 +21,7 @@ const HomeScreen = () => {
       className='mt-2'
       style={{ paddingTop: safeArea.top, paddingBottom: safeArea.bottom }}
     >
-      <Text className='text-1xl font-bold px-4 mb-2'>HomeScrseen</Text>
+      <Text className='text-1xl font-bold px-4 mb-2'>Movies App</Text>
 
       {/* CARROUSEL */}
       <MainSlideshow movies={nowPlayingQuery.data ?? []} />
