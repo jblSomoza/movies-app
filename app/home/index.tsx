@@ -3,9 +3,10 @@ import React from 'react'
 import { useMovies } from '@/presentation/hooks/useMovies'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import MainSlideshow from '@/presentation/components/MainSlideshow';
+import MovieHorizontalList from '@/presentation/components/movies/MovieHorizontalList';
 
 const HomeScreen = () => {
-    const { nowPlayingQuery } = useMovies();
+    const { nowPlayingQuery, popularQuery } = useMovies();
     const safeArea = useSafeAreaInsets();
 
     if(nowPlayingQuery.isLoading) {
@@ -25,6 +26,9 @@ const HomeScreen = () => {
 
       {/* CARROUSEL */}
       <MainSlideshow movies={nowPlayingQuery.data ?? []} />
+
+      {/* POPULAR MOVIES */}
+      <MovieHorizontalList movies={ popularQuery.data ?? [] } title='Populares'/>
     </View>
   )
 }
