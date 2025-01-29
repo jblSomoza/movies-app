@@ -8,6 +8,7 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import { router } from "expo-router";
+import { LinearGradient } from 'expo-linear-gradient';
 
 interface MovieHeaderProps {
   poster: string;
@@ -20,6 +21,17 @@ const MovieHeader = ({ poster, original_title, title }: MovieHeaderProps) => {
 
   return (
     <>
+      <LinearGradient
+        colors={["rgba(0,0,0,0.3)", "transparent"]}
+        start={[0, 0]}
+        style={{
+          height: screenHeight * 0.4,
+          position: 'absolute',
+          width: '100%',
+          zIndex: 1,
+        }}
+      />
+
       <View style={{
         position: 'absolute',
         top: 40,
